@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Cources</string>
+    <string name="title_main">Главная</string>
+    <string name="title_favorites">Избранное</string>
+    <string name="title_account">Аккаунт</string>
+    <string name="title_login">Вход</string>
+
+    <string name="email">Email</string>
+    <string name="email_hint">example@gmail.com</string>
+    <string name="password">Пароль</string>
+    <string name="password_hint">Введите пароль</string>
+    <string name="enter">Вход</string>
+    <string name="forgot_password">Забыл пароль</string>
+    <string name="registration">Регистрация</string>
+    <string name="no_account">Нет аккаунта?</string>
+      <string name="title_dynamicfeature">Module Title</string>
+    <string name="price_format">%1$s ₽</string>
+
+
+    <string name="january">Января</string>
+    <string name="february">Февраля</string>
+    <string name="march">Марта</string>
+    <string name="april">Апреля</string>
+    <string name="may">Мая</string>
+    <string name="june">Июня</string>
+    <string name="july">Июля</string>
+    <string name="august">Августа</string>
+    <string name="september">Сентября</string>
+    <string name="october">Октября</string>
+    <string name="november">Ноября</string>
+    <string name="december">Декабря</string>
+</resources>

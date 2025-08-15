@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="title" type="String"/>
+        <variable name="hint" type="String"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Edittext_Title"
+            android:text="@{title}" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/textInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/dark_grey"
+            app:cardCornerRadius="32dp"
+            app:strokeWidth="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text"
+                style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@color/dark_grey"
+                android:hint="@{hint}"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey"
+                android:textSize="14sp" />
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</layout>
