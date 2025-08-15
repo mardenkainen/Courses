@@ -29,7 +29,7 @@ class LoginFragment : Fragment() {
     ): View {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        binding.email.editText.addTextChangedListener(object : TextWatcher {
+        binding.email.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(p0: Editable?) {}
 
             override fun beforeTextChanged(
@@ -49,7 +49,7 @@ class LoginFragment : Fragment() {
                 viewModel.setEmail(p0?.toString() ?: "")
             }
         })
-        binding.password.editText.addTextChangedListener(object : TextWatcher {
+        binding.password.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(p0: Editable?) {}
 
             override fun beforeTextChanged(
@@ -69,7 +69,7 @@ class LoginFragment : Fragment() {
                 viewModel.setPassword(p0?.toString() ?: "")
             }
         })
-        binding.email.editText.filters = arrayOf(CyrillicFilter)
+        binding.email.filters = arrayOf(CyrillicFilter)
         binding.ok.setOnClickListener {
             openURL("https://ok.ru/")
         }

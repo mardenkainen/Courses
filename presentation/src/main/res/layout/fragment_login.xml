@@ -25,40 +25,60 @@
             app:layout_constraintTop_toTopOf="@+id/line_1" />
 
         <LinearLayout
-            android:id="@+id/email_layout"
+            android:id="@+id/login_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView">
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/textView">
 
-            <include
-                android:id="@+id/email"
-                layout="@layout/edittext_with_title"
+            <TextView
+                style="@style/Edittext_Title"
+                android:text="@string/email" />
+
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:hint="@{@string/email_hint}"
-                app:title="@{@string/email}" />
-        </LinearLayout>
+                android:layout_height="40dp"
+                android:backgroundTint="@color/dark_grey"
+                app:cardCornerRadius="32dp"
+                app:strokeWidth="0dp">
 
-        <LinearLayout
-            android:id="@+id/password_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/email_layout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:hint="@string/email_hint"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="10dp" />
+            </com.google.android.material.card.MaterialCardView>
 
-            <include
-                android:id="@+id/password"
-                layout="@layout/edittext_with_title"
+            <TextView
+                style="@style/Edittext_Title"
+                android:text="@string/password" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/textInputLayout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                app:hint="@{@string/password_hint}"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:title="@{@string/password}" />
+                android:layout_height="40dp"
+                android:backgroundTint="@color/dark_grey"
+                app:cardCornerRadius="32dp"
+                app:strokeWidth="0dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:hint="@string/password_hint"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="10dp" />
+            </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
@@ -73,7 +93,7 @@
             android:textSize="16sp"
             android:textStyle="bold"
             app:backgroundTint="@drawable/button_state_selector"
-            app:layout_constraintTop_toBottomOf="@id/password_layout" />
+            app:layout_constraintTop_toBottomOf="@id/login_info" />
 
         <TextView
             android:id="@+id/no_account"
